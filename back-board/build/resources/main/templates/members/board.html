@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <a href="/">홈</a>
+    <a id="logoutForm" href="/write">글 작성</a>
+</head>
+<body>
+<div class="container">
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>no</th>
+                <th>id</th>
+                <th>제목</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr th:each="board : ${boards}">
+                        <td th:text="${board.id}"></td>
+                        <td th:text="${board.userid}"></td>
+                    <td><a th:href="@{'/board/context?id=' + ${board.id}}" th:text="${board.title}"></a><td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div> <!-- /container -->
+
+<script>
+    function checkLoginStatus() {
+        fetch('/members/login')
+            .then(response => response.text())
+            .then(isLoggedIn => {
+                var logoutForm = document.getElementById('logoutForm');
+                if (isLoggedIn === 'true') {
+                    logoutForm.style.display = 'block';
+                } else {
+                    logoutForm.style.display = 'none';
+                }
+            });
+    }
+    window.onload = checkLoginStatus;
+</script>
+
+</body>
+</html>

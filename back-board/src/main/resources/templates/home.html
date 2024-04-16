@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <div id="logoutForm" class="navbar align-self-center d-flex">
+        <p th:text="${session.userid} + ' 님 안녕하세요'">안녕하세요</p>
+        <a class="nav-link" href="/members/logout">로그아웃</a>
+    </div>
+</head>
+<body>
+<div class="container">
+    <div>
+        <h1>Hello Spring</h1>
+        <p>회원 기능</p>
+        <p>
+            <a href="/members/new">회원 가입</a>
+            <a href="/members/LogIn">로그인</a>
+            <a href="/members">회원 목록</a>
+            <a href="/members/board">게시판</a>
+        </p>
+    </div>
+</div> <!-- /container -->
+
+<script>
+    function checkLoginStatus() {
+        fetch('/members/login')
+            .then(response => response.text())
+            .then(isLoggedIn => {
+                var logoutForm = document.getElementById('logoutForm');
+                if (isLoggedIn === 'true') {
+                    logoutForm.style.display = 'block';
+                } else {
+                    logoutForm.style.display = 'none';
+                }
+            });
+    }
+    window.onload = checkLoginStatus;
+</script>
+
+</body>
+</html>

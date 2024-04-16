@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <a href="/">홈</a>
+</head>
+<body>
+<div class="container">
+    <form action="members/board" method="post">
+        <div class="form-group">
+            <label for="title">제목</label>
+            <input type="text" id="title" name="title" placeholder="제목을 입력하세요">
+            <label for="text">글</label>
+            <input type="text" id="text" name="text" placeholder="글 작성">
+        </div>
+        <button type="submit">등록</button>
+    </form>
+</div> <!-- /container -->
+</body>
+</html>
