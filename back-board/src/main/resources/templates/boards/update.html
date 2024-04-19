@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <a href="/">홈</a>
+</head>
+<body>
+<div class="container">
+    <form th:each="board : ${boards}" th:action="@{'/members/board/' + ${board.id} + '/update'}" method="post">
+        <div class="form-group">
+            <label for="title">제목</label>
+            <input type="text" id="title" name="title" placeholder="제목을 입력하세요" th:value="${board.title}">
+            <label for="text">글</label>
+            <input type="text" id="text" name="text" placeholder="글 작성" th:value="${board.text}">
+        </div>
+        <button type="submit">수정</button>
+    </form>
+</div> <!-- /container -->
+</body>
+</html>

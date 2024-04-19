@@ -22,8 +22,13 @@
                 <td th:text="${board.title}"></td>
                 <td th:text="${board.text}"></td>
                 <td>
-                    <form id="logoutForm" th:action="@{'/' + ${board.id} + '/delete'}" method="post">
+                    <form class="logoutForm" th:action="@{'/' + ${board.id} + '/delete'}" method="post" th:if="${session.userid eq board.userid}">
                         <button type="submit">삭제</button>
+                    </form>
+                    <form class="logoutForm" th:action="@{'/' + ${board.id} + '/modify'}" method="post" th:if="${session.userid eq board.userid}">
+                        <!-- 숨겨진 입력으로 사용자 ID를 전달합니다 -->
+                        <input type="hidden" name="userid" th:value="${board.userid}" />
+                        <button type="submit">수정</button>
                     </form>
                 </td>
             </tr>
@@ -37,11 +42,15 @@
         fetch('/members/login')
             .then(response => response.text())
             .then(isLoggedIn => {
-                var logoutForm = document.getElementById('logoutForm');
+                var logoutForms = document.querySelectorAll('.logoutForm');
                 if (isLoggedIn === 'true') {
-                    logoutForm.style.display = 'block';
+                    logoutForms.forEach(form => {
+                        form.style.display = 'block';
+                    });
                 } else {
-                    logoutForm.style.display = 'none';
+                    logoutForms.forEach(form => {
+                        form.style.display = 'none';
+                    });
                 }
             });
     }

@@ -33,6 +33,13 @@ public class BoardService {
     }
 
     /**
+     * 글 수정
+     */
+    public void update(Long id) {
+        boardRepository.modifyBoard(id);
+    }
+
+    /**
      * 전체 글 조회
      */
     public List<Board> findBoard() {

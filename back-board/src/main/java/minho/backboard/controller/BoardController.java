@@ -3,9 +3,8 @@ package minho.backboard.controller;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import minho.backboard.domain.Board;
-import minho.backboard.domain.Member;
+import minho.backboard.repository.BoardRepository;
 import minho.backboard.service.BoardService;
-import minho.backboard.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -59,9 +58,29 @@ public class BoardController {
     }
 
     @PostMapping("/{id}/delete")
-    public String boardDelete(@PathVariable Long id) {
+    public String delete(@PathVariable("id") Long id) {
+        System.out.println("pass");
         boardService.delete(id);
-        return "redirect:/members/board";
+        System.out.println("pass2");
+
+        return "redirect:/";
     }
+
+
+//    @GetMapping("/{id}/modify")
+//    public String update(@RequestParam("id") Long id, Model model) {
+//        Optional<Board> board = boardService.findOneBoard(id);
+//        board.ifPresent(boards -> model.addAttribute("boards", board.get()));
+//        return "boards/update";
+//    }
+
+//    @PostMapping("/{id}/modify")
+//    public ResponseEntity<String> updateBoard(
+//            @PathVariable("id") Long id,
+//            @RequestParam("title") String title,
+//            @RequestParam("text") String text) {
+//        boardService.update(id, title, text);
+//        return ResponseEntity.ok("게시글이 수정되었습니다.");
+//    }
 }
 

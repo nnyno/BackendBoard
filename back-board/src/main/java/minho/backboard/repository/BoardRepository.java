@@ -1,6 +1,7 @@
 package minho.backboard.repository;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityNotFoundException;
 import minho.backboard.domain.Board;
 
 import java.util.List;
@@ -22,14 +23,17 @@ public class BoardRepository implements IBoardRepository{
 
     @Override
     public void deleteBoard(Long id) {
-        Board result = em.find(Board.class, id);
-        if (result != null) {
-            em.remove(result);
-        }
+        em.createQuery("DELETE FROM Board p WHERE p.id = :id")
+                .setParameter("id", id)
+                .executeUpdate();
     }
 
     @Override
-    public Board modifyBoard(Board board) {
+    public Board modifyBoard(Long id) {
+        Board board = em.find(Board.class, id);
+        if (board != null) {
+            em.merge(board);
+        }
         return null;
     }
 
@@ -40,12 +44,12 @@ public class BoardRepository implements IBoardRepository{
     }
 
     @Override
-    public List<Board> findByTitle(String title) {
+    public Optional<Board> findByTitle(String title) {
         List<Board> result = em.createQuery("select m from Board m where m.title = :title", Board.class)
                 .setParameter("title", title)
                 .getResultList();
 
-        return result;
+        return result.stream().findAny();
     }
 
     @Override

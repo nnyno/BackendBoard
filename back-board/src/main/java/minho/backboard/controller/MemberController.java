@@ -63,6 +63,7 @@ public class MemberController {
             HttpSession session = request.getSession();
             session.setAttribute("userid", request.getParameter("userid"));
             session.setAttribute("password", request.getParameter("password"));
+            session.setMaxInactiveInterval(30*60);
             return "redirect:/";
         } else {
             user.setUserid(null);
@@ -75,7 +76,7 @@ public class MemberController {
     @ResponseBody
     public String loginStatus(HttpServletRequest request) {
         HttpSession session = request.getSession(false); // 세션이 없으면 null 반환
-        if (session != null && session.getAttribute("userid") != null) {
+        if (session != null) {
             return "true"; // 로그인 상태인 경우
         } else {
             return "false"; // 로그아웃 상태인 경우
@@ -88,11 +89,4 @@ public class MemberController {
         return "redirect:/members/LogIn";
     }
 
-    @GetMapping("/members/userid")
-    @ResponseBody
-    public String loginId(@RequestParam("id") Long id) {
-        Optional<Member> result = memberService.findOne(dbMemberRepository.findById(id).get().getUserid());
-        String userid = result.get().getUserid();
-        return userid;
-    }
 }
