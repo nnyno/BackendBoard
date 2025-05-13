@@ -46,13 +46,19 @@ JAVA와 SPRING의 연습을 위해 혼자 개발
 
 - 글작성
 
-<img src="https://github.com/user-attachments/assets/9be6c9e5-1b0c-4c41-ae6e-5e52004a12e0" width="50%" height="50%"/>
-<img src="https://github.com/user-attachments/assets/00899f67-fc01-48cc-a098-3a80fb9d4e5f" width="50%" height="50%"/>
-<img src="https://github.com/user-attachments/assets/34d6a3c9-9f66-4ff8-8cbc-d508294c141c" width="50%" height="50%"/>
-<img src="https://github.com/user-attachments/assets/9e25a51c-aae0-4c17-a6b2-70aa335676ad" width="50%" height="50%"/>
-<img src="https://github.com/user-attachments/assets/01249c78-ce0f-4364-a0d2-d1a78af685c0" width="50%" height="50%"/>
-<img src="https://github.com/user-attachments/assets/faedfda8-df7f-4140-820f-6f1c9ff324a8" width="50%" height="50%"/>
+<img src="https://github.com/user-attachments/assets/9be6c9e5-1b0c-4c41-ae6e-5e52004a12e0" width="50%" height="50%"/><img src="https://github.com/user-attachments/assets/00899f67-fc01-48cc-a098-3a80fb9d4e5f" width="50%" height="50%"/>
 
+- 상세 페이지
+
+<img src="https://github.com/user-attachments/assets/34d6a3c9-9f66-4ff8-8cbc-d508294c141c" width="50%" height="50%"/>
+
+- 수정
+
+<img src="https://github.com/user-attachments/assets/9e25a51c-aae0-4c17-a6b2-70aa335676ad" width="50%" height="50%"/><img src="https://github.com/user-attachments/assets/01249c78-ce0f-4364-a0d2-d1a78af685c0" width="50%" height="50%"/>
+
+- 삭제
+
+<img src="https://github.com/user-attachments/assets/faedfda8-df7f-4140-820f-6f1c9ff324a8" width="50%" height="50%"/>
 
 # 개발하면서 힘들었던점 및 느낀점
 - 삭제, 수정 버튼 생성 시 로그인 아이디가 게시글 DB에 있는 아이디와 일치했을 때 스크립트에서 삭제, 수정 버튼을 활성화 또는비활성화 하는것
