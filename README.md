@@ -14,7 +14,7 @@ JAVA와 SPRING의 연습을 위해 혼자 개발
 - 제목 클릭시 상세페이지로 이동
 - 로그인 아이디를 가져와 작성자와 일치시 수정, 삭제 버튼 생성
 # 화면
-![Image](https://github.com/user-attachments/assets/25a39500-45cd-4fac-8f01-caa660ec8548){: width="100" height="100"}
+![Image](https://github.com/user-attachments/assets/25a39500-45cd-4fac-8f01-caa660ec8548)
 ![Image](https://github.com/user-attachments/assets/1aad4853-a8a6-4381-a2e5-2d4cb71a0a13)
 ![Image](https://github.com/user-attachments/assets/9602348d-7bd4-4ac7-b05c-2ca32f505c84)
 # 개발하면서 힘들었던점 및 느낀점
