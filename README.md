@@ -19,7 +19,7 @@ JAVA와 SPRING의 연습을 위해 혼자 개발
 
 - 회원가입
 
-<img src="https://github.com/user-attachments/assets/c505f26c-fe34-4e60-b8f0-75a185f6cf16" width="50%" height="50%"/> <img src="https://github.com/user-attachments/assets/878673ec-84e5-46b8-aa57-ae2021f37ccc" width="50%" height="50%"/>
+<img src="https://github.com/user-attachments/assets/c505f26c-fe34-4e60-b8f0-75a185f6cf16" width="50%" height="50%"/><img src="https://github.com/user-attachments/assets/878673ec-84e5-46b8-aa57-ae2021f37ccc" width="50%" height="50%"/>
 
 <img src="https://github.com/user-attachments/assets/5c2bd247-1ad3-40f2-a9c3-b675dc75a0c9" width="50%" height="50%"/>
 <img src="https://github.com/user-attachments/assets/e5a4e74a-808c-4ea8-9f0a-3efa6b7b6c72" width="50%" height="50%"/>
