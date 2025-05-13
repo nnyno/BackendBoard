@@ -14,7 +14,7 @@ JAVA와 SPRING의 연습을 위해 혼자 개발
 - 제목 클릭시 상세페이지로 이동
 - 로그인 아이디를 가져와 작성자와 일치시 수정, 삭제 버튼 생성
 # 화면
-<img src="https://github.com/user-attachments/assets/25a39500-45cd-4fac-8f01-caa660ec8548.png" width="300" height="500"/>
+<img src="https://github.com/user-attachments/assets/25a39500-45cd-4fac-8f01-caa660ec8548.png" width="300" height="200"/>
 # 개발하면서 힘들었던점 및 느낀점
 - 삭제, 수정 버튼 생성 시 로그인 아이디가 게시글 DB에 있는 아이디와 일치했을 때 스크립트에서 삭제, 수정 버튼을 활성화 또는비활성화 하는것
 
