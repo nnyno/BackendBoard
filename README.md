@@ -35,11 +35,17 @@ JAVA와 SPRING의 연습을 위해 혼자 개발
 - 로그아웃
 
 <img src="https://github.com/user-attachments/assets/e6d5ebeb-447f-4b7e-85c6-20af53706302" width="50%" height="50%"/>
+
 ****************
 
 ## 게시판
 
+- 메인화면
+
 <img src="https://github.com/user-attachments/assets/82ccb46f-8e1b-45ec-a201-f3a2f515e650" width="50%" height="50%"/>
+
+- 글작성
+
 <img src="https://github.com/user-attachments/assets/9be6c9e5-1b0c-4c41-ae6e-5e52004a12e0" width="50%" height="50%"/>
 <img src="https://github.com/user-attachments/assets/00899f67-fc01-48cc-a098-3a80fb9d4e5f" width="50%" height="50%"/>
 <img src="https://github.com/user-attachments/assets/34d6a3c9-9f66-4ff8-8cbc-d508294c141c" width="50%" height="50%"/>
